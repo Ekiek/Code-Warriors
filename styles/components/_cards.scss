@@ -6,26 +6,50 @@
 }
 
 .card {
-  min-width: 16rem;
+  width: 17rem;
   background-color: $color-bg-secondary;
   padding: $space-md;
   border-radius: $radius-md;
-  flex-shrink: 0;
+  transition: transform $transition-base,
+              background-color $transition-base,
+              box-shadow $transition-base;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-0.4rem);
+  background-color: $color-bg-elevated;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 .card-image {
   width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: $radius-sm;
   margin-bottom: $space-sm;
 }
 
 .card-title {
   font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.3;
   margin-bottom: $space-xs;
 }
 
 .card-subtitle {
   font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-count {
+  font-size: 1.2rem; 
   color: $color-text-secondary;
 }
 
