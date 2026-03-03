@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Markup</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<div class="app">
+
+ <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="sidebar-list">
+
+        <li class="sidebar-item active">
+          <a href="#" class="sidebar-link">
+            <span class="sidebar-icon"></span>
+            <span class="sidebar-text">My Library</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <span class="sidebar-icon"></span>
+            <span class="sidebar-text">Pins</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <span class="sidebar-icon"></span>
+            <span class="sidebar-text">Playlists</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- main -->
+  <div class="main">
+
+    <!-- header -->
+    <header class="header">
+
+      <nav class="header-nav">
+        <a href="#" class="nav-link nav-active">Home</a>
+        <a href="#" class="nav-link">Discover</a>
+        <a href="#" class="nav-link">Search</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn"></button>
+        <button class="icon-btn"></button>
+        <button class="icon-btn"></button>
+      </div>
+
+    </header>
+
+    <!-- scrollable -->
+    <main class="content">
+
+      <!-- filters -->
+      <div class="filters">
+        <button class="chip chip-active">All</button>
+        <button class="chip">Music</button>
+        <button class="chip">Podcasts</button>
+        <button class="chip">Audiobooks</button>
+      </div>
+
+      <!-- section -->
+      <section class="section">
+        <h2 class="section-title">Made For You</h2>
+
+        <div class="card-list">
+          <!-- აქ უნდა დაამატო 8 card -->
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- player -->
+  <footer class="player">
+
+    <div class="player-left">
+      <img src="assets/images/placeholder.png" alt="cover">
+      <div>
+        <div class="song-title">Track Title</div>
+        <div class="song-artist">Artist</div>
+      </div>
+    </div>
+
+    <div class="player-center">
+      <div class="player-controls">
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <div class="player-right">
+      <button></button>
+      <button></button>
+    </div>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
