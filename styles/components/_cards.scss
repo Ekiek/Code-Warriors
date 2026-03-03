@@ -1,0 +1,43 @@
+.card-list {
+  display: flex;
+  gap: $space-md;
+  overflow-x: auto;
+  padding-bottom: $space-sm;
+}
+
+.card {
+  min-width: 16rem;
+  background-color: $color-bg-secondary;
+  padding: $space-md;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: $radius-sm;
+  margin-bottom: $space-sm;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: $space-xs;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+
+@include respond(desktop) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: $space-lg;
+    overflow: visible;
+  }
+
+  .card {
+    min-width: auto;
+  }
+}

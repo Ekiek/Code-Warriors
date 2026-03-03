@@ -1,18 +1,31 @@
 .sidebar {
-  padding: 2rem;
+  padding: $space-lg;
 }
 
 .sidebar-list {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: $space-md;
 }
 
 .sidebar-link {
-  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm $space-md;
+  border-radius: $radius-sm;
+  color: $color-text-secondary;
+  text-decoration: none;
+  transition: background $transition-base, color $transition-base;
+}
+
+.sidebar-link:hover {
+  background-color: $color-hover;
+  color: $color-text-primary;
 }
 
 .sidebar-item.active .sidebar-link {
-  color: #ffffff;
+  background-color: $color-active;
+  color: $color-text-primary;
   font-weight: 600;
 }
