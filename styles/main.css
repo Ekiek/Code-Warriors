@@ -1,3 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  display: none;
+  width: 24rem;
+  background-color: #000000;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2.4rem;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: #181818;
+  border-top: 0.1rem solid #282828;
+}
+
+@media (min-width: 1200px) {
+  .app {
+    flex-direction: row;
+  }
+  .sidebar {
+    width: 24rem;
+    display: block;
+  }
+  .main {
+    padding-bottom: 8rem;
+  }
+}
+.card-list {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.card {
+  min-width: 16rem;
+  background-color: #181818;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+@media (min-width: 1200px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    overflow: visible;
+  }
+  .card {
+    min-width: auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

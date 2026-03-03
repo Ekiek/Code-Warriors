@@ -1,0 +1,18 @@
+.sidebar {
+  padding: 2rem;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sidebar-link {
+  color: #b3b3b3;
+}
+
+.sidebar-item.active .sidebar-link {
+  color: #ffffff;
+  font-weight: 600;
+}
