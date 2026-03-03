@@ -66,3 +66,13 @@ Branch structure:
 3. After full integration, merge develop → main
 Main branch is protected via pull request rule.
 ```
+
+## HTML Structure
+
+The base HTML skeleton has been implemented including:
+- Sidebar navigation
+- Header inside main content
+- Scrollable content area
+- Player layout structure
+
+Markup follows semantic HTML structure.
