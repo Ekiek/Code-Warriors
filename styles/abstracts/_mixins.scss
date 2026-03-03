@@ -1,4 +1,4 @@
-//FLex
+// Flex helpers
 
 @mixin flex-center {
   display: flex;
@@ -12,23 +12,7 @@
   justify-content: space-between;
 }
 
-//Responsive
-
-@mixin respond($breakpoint) {
-  @if $breakpoint == desktop {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  }
-}
-
-//Text truncate
-
-@mixin truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+// Responsive
 
 @mixin respond($breakpoint) {
   @if $breakpoint == tablet {
@@ -42,4 +26,12 @@
       @content;
     }
   }
+}
+
+// Text truncate
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

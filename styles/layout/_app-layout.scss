@@ -1,9 +1,11 @@
 .app {
-  display: flex;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
 }
 
 .sidebar {
+  display: none; 
   width: $sidebar-width;
   background-color: $color-sidebar;
 }
@@ -15,36 +17,7 @@
   padding-bottom: $player-height;
 }
 
-.main__content {
-  flex: 1;
-  overflow-y: auto;
-  padding: $space-lg;
-}
-
-.player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: $player-height;
-  background-color: $color-player;
-  border-top: 0.1rem solid #282828;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: $player-height;
-}
-
-.main__content {
+.content { 
   flex: 1;
   overflow-y: auto;
   padding: $space-lg;
@@ -61,12 +34,62 @@
 }
 
 @include respond(desktop) {
+
   .app {
     flex-direction: row;
   }
 
   .sidebar {
-    width: $sidebar-width;
+    width: 24rem;
     display: block;
   }
+
+  .main {
+    padding-bottom: $player-height;
+  }
+
+}
+.card-list {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.card {
+  min-width: 16rem;
+  background-color: #181818;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+@include respond(desktop) {
+
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    overflow: visible;
+  }
+
+  .card {
+    min-width: auto;
+  }
+
 }
