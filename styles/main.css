@@ -21,6 +21,17 @@ ul {
   list-style: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -109,6 +120,47 @@ ul {
   .card {
     min-width: auto;
   }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  background-color: #181818;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #b3b3b3;
+  font-size: 1.4rem;
+}
+
+.nav-active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sidebar {
+  padding: 2rem;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sidebar-link {
+  color: #b3b3b3;
+}
+
+.sidebar-item.active .sidebar-link {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
