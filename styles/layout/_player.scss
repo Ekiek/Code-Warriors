@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  width: 45%;
+  width: 50%;
 }
 
 .player-controls {
@@ -30,22 +30,39 @@
   gap: 1rem;
 }
 
+/* BUTTONS */
+
 .control-btn,
 .play-btn {
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* small icons */
 
 .control-btn img {
   width: 2.4rem;
   height: 2.4rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 }
+
+.control-btn:hover img {
+  opacity: 1;
+}
+
+/* play button */
 
 .play-btn img {
   width: 3.6rem;
   height: 3.6rem;
+  display: block;
 }
 
 /* PROGRESS */
@@ -118,134 +135,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
-  width: 30%;
-}
-
-.player-right img {
-  width: 2.2rem;
-  height: 2.2rem;
-}
-.player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 8rem;
-
-  background-color: #181818;
-  border-top: 1px solid #282828;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 2rem;
-}
-
-/* LEFT */
-
-.player-left {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  width: 45%;
-}
-
-.player-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.control-btn,
-.play-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.control-btn img {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-.play-btn img {
-  width: 3.6rem;
-  height: 3.6rem;
-}
-
-/* PROGRESS */
-
-.progress-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  flex: 1;
-}
-
-.time {
-  font-size: 1.2rem;
-  color: #b3b3b3;
-}
-
-.progress-bar {
-  flex: 1;
-  height: 0.4rem;
-  background-color: #3a3a3a;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.progress {
-  width: 40%;
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 1rem;
-}
-
-.progress-bar:hover .progress {
-  background-color: #1db954;
-}
-
-/* CENTER (cover + song info) */
-
-.player-center {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   width: 25%;
-}
-
-.player-cover {
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-}
-
-.player-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.song-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.song-artist {
-  font-size: 1.2rem;
-  color: #b3b3b3;
-}
-
-/* RIGHT */
-
-.player-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  width: 30%;
 }
 
 .player-right img {
