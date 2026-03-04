@@ -120,7 +120,9 @@ body {
 }
 
 .sidebar {
+  width: 25.9rem;
   padding: 2.4rem;
+  background-color: #000000;
 }
 
 .sidebar-list {
