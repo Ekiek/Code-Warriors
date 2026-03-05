@@ -4,6 +4,10 @@
   background-color: $color-sidebar;
 }
 
+.sidebar-nav {
+  margin-top: 2rem;
+}
+
 .sidebar-list {
   display: flex;
   flex-direction: column;
@@ -13,9 +17,15 @@
 .sidebar-link {
   display: flex;
   align-items: center;
-  gap: $space-sm;
+  gap: $space-md;
+ 
   padding: $space-sm $space-md;
   border-radius: $radius-sm;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
   color: $color-text-secondary;
   text-decoration: none;
   transition: background $transition-base, color $transition-base;
@@ -26,8 +36,17 @@
   color: $color-text-primary;
 }
 
-.sidebar-item.active .sidebar-link {
-  background-color: $color-active;
-  color: $color-text-primary;
-  font-weight: 600;
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-text {
+  font-size: 1.4rem;
+}
+
+.sidebar-right-icon {
+  display: flex;
+  align-items: center;
 }
