@@ -4,8 +4,17 @@
   flex-direction: column;
 }
 
+.layout{
+  display: flex;
+}
+
+.header {
+  width: 100%;
+}
+
 .sidebar {
-  display: none;
+  display: flex;
+  flex-direction: column;
   width: $sidebar-width;
   background-color: $color-sidebar;
 }
@@ -34,8 +43,8 @@
 }
 
 @include respond(desktop) {
-  .app {
-    flex-direction: row;
+  .layout {
+    display: flex;
   }
 
   .sidebar {

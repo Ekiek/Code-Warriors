@@ -53,8 +53,17 @@ body {
   flex-direction: column;
 }
 
+.layout {
+  display: flex;
+}
+
+.header {
+  width: 100%;
+}
+
 .sidebar {
-  display: none;
+  display: flex;
+  flex-direction: column;
   width: 24rem;
   background-color: #000000;
 }
@@ -83,8 +92,8 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .app {
-    flex-direction: row;
+  .layout {
+    display: flex;
   }
   .sidebar {
     display: block;
@@ -96,6 +105,25 @@ body {
   align-items: center;
   padding: 1.6rem 2.4rem;
   background-color: #181818;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.header-left {
+  width: 24rem;
+}
+
+.header-center {
+  margin-right: 2.4rem;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.6rem;
 }
 
 .header-nav {
@@ -119,54 +147,79 @@ body {
   font-weight: 600;
 }
 
-.sidebar {
-  width: 25.9rem;
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: white;
+}
+
+Li.sidebar {
+  background: #000000;
+  width: 24rem;
   padding: 2.4rem;
-  background-color: #000000;
 }
-
-.sidebar-nav {
-  margin-top: 2rem;
+Li.sidebar .sidebar-nav {
+  margin-bottom: 2.4rem;
 }
-
-.sidebar-list {
+Li.sidebar button.sidebar-list {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-
-.sidebar-link {
+Li.sidebar .sidebar-item {
+  list-style: none;
+}
+Li.sidebar button.sidebar-link {
+  all: unset;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  justify-content: space-between;
+  width: 100%;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   background: transparent;
   border: none;
-  cursor: pointer;
+  box-shadow: none;
+  outline: none;
   color: #b3b3b3;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
-
-.sidebar-link:hover {
-  background-color: #1a1a1a;
+Li.sidebar button.sidebar-link:hover {
+  background-color: white;
   color: #ffffff;
 }
-
-.sidebar-icon {
+Li.sidebar .sidebar-icon,
+Li.sidebar .sidebar-right-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-
-.sidebar-text {
-  font-size: 1.4rem;
+Li.sidebar .sidebar-icon img,
+Li.sidebar .sidebar-right-icon img {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
 }
-
-.sidebar-right-icon {
-  display: flex;
-  align-items: center;
+Li.sidebar .sidebar-icon img {
+  margin-right: 0.8rem;
+}
+Li.sidebar .sidebar-text {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+Li.sidebar .sidebar-right-icon {
+  opacity: 0.6;
+  margin-left: auto;
 }
 
 .card-list {

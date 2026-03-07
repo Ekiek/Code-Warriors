@@ -2,8 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: $space-md $space-lg;
   background-color: $color-bg-secondary;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+}
+
+.header-left {
+  width: $sidebar-width;
+}
+
+.header-center {
+  margin-right: $space-lg;
+}
+
+.header-right {
+  display: flex;
+  gap: $space-md;
 }
 
 .header-nav {
@@ -25,4 +45,18 @@
 .nav-link.active {
   color: $color-text-primary;
   font-weight: 600;
+}
+
+.icon-btn {
+  display: flex;  
+  align-items: center;
+  gap: 0.6rem;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
 }
