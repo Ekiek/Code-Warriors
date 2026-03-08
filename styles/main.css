@@ -95,9 +95,6 @@ body {
   .layout {
     display: flex;
   }
-  .sidebar {
-    display: block;
-  }
 }
 .header {
   display: flex;
@@ -159,23 +156,23 @@ body {
   color: #ffffff;
 }
 
-Li.sidebar {
+.sidebar {
   background: #000000;
   width: 24rem;
   padding: 2.4rem;
 }
-Li.sidebar .sidebar-nav {
+.sidebar .sidebar-nav {
   margin-bottom: 2.4rem;
 }
-Li.sidebar button.sidebar-list {
+.sidebar button.sidebar-list {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-Li.sidebar .sidebar-item {
+.sidebar .sidebar-item {
   list-style: none;
 }
-Li.sidebar button.sidebar-link {
+.sidebar .sidebar-link {
   all: unset;
   display: flex;
   align-items: center;
@@ -192,32 +189,32 @@ Li.sidebar button.sidebar-link {
   cursor: pointer;
   transition: 0.2s ease;
 }
-Li.sidebar button.sidebar-link:hover {
+.sidebar .sidebar-link:hover {
   background-color: white;
   color: #ffffff;
 }
-Li.sidebar .sidebar-icon,
-Li.sidebar .sidebar-right-icon {
+.sidebar .sidebar-icon,
+.sidebar .sidebar-right-icon {
   display: flex;
   align-items: center;
 }
-Li.sidebar .sidebar-icon img,
-Li.sidebar .sidebar-right-icon img {
+.sidebar .sidebar-icon img,
+.sidebar .sidebar-right-icon img {
   display: block;
   width: 2.2rem;
   height: 2.2rem;
 }
-Li.sidebar .sidebar-icon img {
+.sidebar .sidebar-icon img {
   margin-right: 0.8rem;
 }
-Li.sidebar .sidebar-text {
+.sidebar .sidebar-text {
   flex: 1;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-Li.sidebar .sidebar-right-icon {
+.sidebar .sidebar-right-icon {
   opacity: 0.6;
   margin-left: auto;
 }

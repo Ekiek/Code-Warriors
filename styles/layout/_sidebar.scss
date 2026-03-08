@@ -1,4 +1,4 @@
-Li.sidebar {
+.sidebar {
   background: $color-sidebar;
   width: $sidebar-width;
   padding: $space-lg;
@@ -17,7 +17,7 @@ Li.sidebar {
     list-style: none;
   }
   
- button.sidebar-link {
+  .sidebar-link {
     all: unset;
     display: flex;
     align-items: center;
