@@ -61,3 +61,10 @@
 .icon-button:hover {
   background: $color-hover;
 }
+.lock-btn.active {
+  background: $color-accent; 
+}
+
+.lock-btn.active svg {
+  stroke: #fff;
+}

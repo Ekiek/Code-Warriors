@@ -1,10 +1,19 @@
+/* ================================
+   App Layout
+================================ */
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
 }
 
-/* header */
+/* ================================
+   Header
+================================ */
 
 .header {
   height: 6rem;
@@ -12,49 +21,74 @@
 
   @include flex-between;
 
-  background: $color-bg-primary;
+  background-color: $color-bg-primary;
   border-bottom: 0.1rem solid $color-border;
-}
 
-/* wrapper */
-
-.layout {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: 67.5rem;
-}
-
-.content {
-  flex: 1;
-  overflow-y: auto;
-  padding: $space-lg;
-  padding-bottom: $player-height;
-  min-height: 0;
-}
-
-.sidebar {
-  width: $sidebar-width;
-  background: $color-sidebar;
-  padding: $space-lg $space-md;
-  border-right: 0.1rem solid $color-border;
   flex-shrink: 0;
 }
 
-@include respond(desktop) {
+/* ================================
+   Main Wrapper
+================================ */
 
-  .app {
-    flex-direction: row;
+.layout {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  overflow: hidden;
+}
+
+/* ================================
+   Sidebar
+================================ */
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+
+  background-color: $color-sidebar;
+  border-right: 0.1rem solid $color-border;
+  padding: $space-lg $space-md;
+
+  overflow-y: auto;
+}
+
+/* ================================
+   Right Side Column
+================================ */
+
+.main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ================================
+   Scrollable Content
+================================ */
+
+.content {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: $space-lg;
+  padding-bottom: calc(#{$player-height} + #{$space-xl});
+
+  background-color: $color-bg-primary;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
-
-  .sidebar {
-    display: block;
-    flex-shrink: 0;
-  }
-
-  .main {
-    flex: 1;
-  }
-
 }
