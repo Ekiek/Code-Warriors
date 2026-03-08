@@ -12,45 +12,30 @@
   align-items: center;
   justify-content: center;
 
-  transition: $transition-base;
+  transition: transform $transition-base,
+              opacity $transition-base;
+}
+
+.control-btn:hover,
+.play-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 /* FILTER CHIPS */
 
 .filters {
   display: flex;
+  align-items: center;
   gap: $space-sm;
 
   margin-bottom: $space-lg;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* chip */
-
-.chip {
-  padding: 0.6rem 1.4rem;
-
-  border-radius: 2rem;
-
-  background: $color-bg-elevated;
-  border: none;
-
-  color: $color-text-secondary;
-  font-size: 1.3rem;
-
-  cursor: pointer;
-
-  transition: $transition-base;
-}
-
-.chip:hover {
-  background: $color-hover;
-  color: $color-text-primary;
-  transform: translateY(-1px);
-}
-
-/* active chip */
-
-.chip-active {
-  background: $color-text-primary;
-  color: $color-bg-primary;
-}
