@@ -91,3 +91,61 @@
     margin-left: auto;
   }
 }
+
+.sidebar-item {
+  position: relative;
+
+  .sidebar-submenu {
+    display: none;         
+    flex-direction: column;
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  &:hover .sidebar-submenu {
+    display: flex;         
+  }
+
+  .sidebar-right-icon img {
+    transition: transform 0.3s;
+  }
+
+  &:hover .sidebar-right-icon img {
+    transform: rotate(90deg); 
+  }
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 1.3rem;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+/* ფანჯარა თავიდან დამალულია */
+.panel {
+  position: absolute;
+  left: 26rem; /* Sidebar-ის სიგანე */
+  top: 0;
+  width: calc(100% - 26rem);
+  height: 100%;
+  background-color: #121212;
+  color: #fff;
+  padding: 2rem;
+  display: none; /* დამალული */
+}
+
+/* თუ checkbox არის ჩაკრული, ფანჯარა გამოჩნდება */
+.toggle-checkbox:checked + label + .panel {
+  display: block;
+}
