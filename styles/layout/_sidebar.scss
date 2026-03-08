@@ -127,25 +127,3 @@
     color: $color-text-primary;
   }
 }
-
-.toggle-checkbox {
-  display: none;
-}
-
-/* ფანჯარა თავიდან დამალულია */
-.panel {
-  position: absolute;
-  left: 26rem; /* Sidebar-ის სიგანე */
-  top: 0;
-  width: calc(100% - 26rem);
-  height: 100%;
-  background-color: #121212;
-  color: #fff;
-  padding: 2rem;
-  display: none; /* დამალული */
-}
-
-/* თუ checkbox არის ჩაკრული, ფანჯარა გამოჩნდება */
-.toggle-checkbox:checked + label + .panel {
-  display: block;
-}
