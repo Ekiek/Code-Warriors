@@ -1,0 +1,56 @@
+/* BUTTONS */
+
+.control-btn,
+.play-btn {
+  background: none;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: $transition-base;
+}
+
+/* FILTER CHIPS */
+
+.filters {
+  display: flex;
+  gap: $space-sm;
+
+  margin-bottom: $space-lg;
+}
+
+/* chip */
+
+.chip {
+  padding: 0.6rem 1.4rem;
+
+  border-radius: 2rem;
+
+  background: $color-bg-elevated;
+  border: none;
+
+  color: $color-text-secondary;
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  transition: $transition-base;
+}
+
+.chip:hover {
+  background: $color-hover;
+  color: $color-text-primary;
+  transform: translateY(-1px);
+}
+
+/* active chip */
+
+.chip-active {
+  background: $color-text-primary;
+  color: $color-bg-primary;
+}

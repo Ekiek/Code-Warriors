@@ -4,41 +4,42 @@
   flex-direction: column;
 }
 
-.sidebar {
-  display: none;
-  width: $sidebar-width;
-  background-color: $color-sidebar;
+/* header */
+
+.header {
+  height: 6rem;
+  padding: 0 $space-lg;
+
+  @include flex-between;
+
+  background: $color-bg-primary;
+  border-bottom: 0.1rem solid $color-border;
 }
 
-.main {
+/* wrapper */
+
+.layout {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  padding-bottom: $player-height;
+  min-height: 0;
 }
+
+/* sidebar */
+
+.sidebar {
+  width: $sidebar-width;
+  background: $color-sidebar;
+  padding: $space-lg $space-md;
+  border-right: 0.1rem solid $color-border;
+  flex-shrink: 0;
+}
+
+/* content */
 
 .content {
   flex: 1;
+  min-width: 0;   
   overflow-y: auto;
   padding: $space-lg;
-}
-
-.player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: $player-height;
-  background-color: $color-player;
-  border-top: 0.1rem solid $color-border;
-}
-
-@include respond(desktop) {
-  .app {
-    flex-direction: row;
-  }
-
-  .sidebar {
-    display: block;
-  }
+  padding-bottom: calc($player-height + $space-lg);
 }

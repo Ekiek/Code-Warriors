@@ -1,47 +1,42 @@
+/* PLAYER */
 .player {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 8rem;
-
-  background-color: #181818;
-  border-top: 1px solid #282828;
-
-  display: flex;
+  height: $player-height;
+  background: $color-player;
+  border-top: 0.1rem solid $color-border;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-
-  padding: 0 2rem;
+  padding: 0 $space-lg;
 }
 
-/* LEFT */
+/* როცა sidebar ჩანს */
+
+@include respond(desktop) {
+  .player {
+    left: $sidebar-width;
+    width: calc(100% - $sidebar-width);
+  }
+}
+
+/* LEFT SECTION */
 
 .player-left {
   display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  width: 50%;
+  flex-direction: column;
+  gap: $space-xs;
+  min-width: 0;
 }
+
+/* controls row */
 
 .player-controls {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-/* BUTTONS */
-
-.control-btn,
-.play-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: $space-sm;
 }
 
 /* small icons */
@@ -50,7 +45,7 @@
   width: 2.4rem;
   height: 2.4rem;
   opacity: 0.7;
-  transition: opacity 0.2s ease;
+  transition: opacity $transition-base;
 }
 
 .control-btn:hover img {
@@ -63,39 +58,41 @@
   width: 3.6rem;
   height: 3.6rem;
   display: block;
+  filter: drop-shadow(0 0 6px #1db95466);
 }
 
-/* PROGRESS */
+/* PROGRESS BAR */
 
 .progress-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  flex: 1;
+  gap: $space-sm;
+  max-width: 20rem;
+  width: 100%;
 }
 
 .time {
   font-size: 1.2rem;
-  color: #b3b3b3;
+  color: $color-text-secondary;
 }
 
 .progress-bar {
   flex: 1;
   height: 0.4rem;
-  background-color: #3a3a3a;
-  border-radius: 1rem;
-  overflow: hidden;
+  background: $color-border;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 
 .progress {
-  width: 40%;
+  width: 20%;
   height: 100%;
-  background-color: #ffffff;
-  border-radius: 1rem;
+  background: $color-text-primary;
+  border-radius: 2rem;
 }
 
 .progress-bar:hover .progress {
-  background-color: #1db954;
+  background: $color-accent;
 }
 
 /* CENTER (cover + song info) */
@@ -103,14 +100,15 @@
 .player-center {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: 25%;
+  gap: $space-sm;
+  justify-self: center;
+  min-width: 0;
 }
 
 .player-cover {
   width: 5rem;
   height: 5rem;
-  object-fit: cover;
+  border-radius: $radius-sm;
 }
 
 .player-info {
@@ -125,7 +123,7 @@
 
 .song-artist {
   font-size: 1.2rem;
-  color: #b3b3b3;
+  color: $color-text-secondary;
 }
 
 /* RIGHT */
@@ -134,11 +132,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
-  width: 25%;
+  gap: $space-sm;
+  max-width: 30rem;
 }
 
 .player-right img {
   width: 2.2rem;
   height: 2.2rem;
 }
+
