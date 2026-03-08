@@ -1,31 +1,80 @@
+// Sidebar
+
 .sidebar {
-  padding: $space-lg;
+  display: none;
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background: $color-sidebar;
+  padding: $space-lg $space-md;
+  border-right: 0.1rem solid $color-border;
+  overflow-y: auto;
 }
+
+// show sidebar on desktop 
+
+@include respond(desktop) {
+  .sidebar {
+    display: block;
+  }
+}
+//  Sidebar List
 
 .sidebar-list {
   display: flex;
   flex-direction: column;
-  gap: $space-md;
+  gap: $space-xs;
 }
+
+// Sidebar Link
 
 .sidebar-link {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-sm $space-md;
+  border: none;
+  border-radius: $radius-sm;
+  background: none;
+  color: $color-text-secondary;
+  text-align: left;
+  cursor: pointer;
+  transition: $transition-base;
+}
+
+
+.sidebar-link-active {
+  background: $color-bg-elevated;
+  color: $color-text-primary;
+}
+
+// icon 
+
+.sidebar-icon {
   display: flex;
   align-items: center;
-  gap: $space-sm;
-  padding: $space-sm $space-md;
-  border-radius: $radius-sm;
-  color: $color-text-secondary;
-  text-decoration: none;
-  transition: background $transition-base, color $transition-base;
+  justify-content: center;
 }
+
+// text
+
+.sidebar-text {
+  font-size: 1.4rem;
+}
+
+// arrow icon
+
+.sidebar-right-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+// hover
 
 .sidebar-link:hover {
-  background-color: $color-hover;
+  background: $color-hover;
   color: $color-text-primary;
-}
-
-.sidebar-item.active .sidebar-link {
-  background-color: $color-active;
-  color: $color-text-primary;
-  font-weight: 600;
 }

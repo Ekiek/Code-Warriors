@@ -1,67 +1,181 @@
-.card-list {
-  display: flex;
-  gap: $space-md;
-  overflow-x: auto;
-  padding-bottom: $space-sm;
+// Sections
+.section {
+  margin-bottom: $space-xl;
 }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-md;
+
+  margin-bottom: $space-md;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-text-primary;
+}
+
+// Slider Arrows
+
+
+.slider-arrows {
+  display: none;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: $color-bg-secondary;
+  color: $color-text-primary;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: background-color $transition-base,
+              transform $transition-base;
+}
+
+.arrow:hover {
+  background-color: $color-bg-elevated;
+  transform: scale(1.05);
+}
+
+.arrow-left::before {
+  content: "‹";
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.arrow-right::before {
+  content: "›";
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+// Scroll Wrapper
+
+.cards-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Card Row
+
+.card-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 17rem;
+  gap: $space-md;
+
+  width: max-content;
+}
+
+// როცა cards-scroll არ არსებობს,
+//  თვითონ card-list გახდეს scrollable
+.section > .card-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  padding-bottom: $space-xs;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Card
 
 .card {
   width: 17rem;
-  background-color: $color-bg-secondary;
+  min-width: 17rem;
+
   padding: $space-md;
   border-radius: $radius-md;
-  transition: transform $transition-base,
-              background-color $transition-base,
-              box-shadow $transition-base;
+  background-color: $color-bg-secondary;
 
   display: flex;
   flex-direction: column;
+  gap: $space-sm;
+
+  transition: transform $transition-base,
+              background-color $transition-base,
+              box-shadow $transition-base;
 }
 
 .card:hover {
   transform: translateY(-0.4rem);
   background-color: $color-bg-elevated;
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.35);
 }
 
 .card-image {
   width: 100%;
   aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+
   border-radius: $radius-sm;
-  margin-bottom: $space-sm;
+}
+
+.card-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $space-sm;
 }
 
 .card-title {
   font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.3;
-  margin-bottom: $space-xs;
+  font-weight: 600;
+  line-height: 1.35;
+  color: $color-text-primary;
 }
 
 .card-subtitle {
   font-size: 1.2rem;
+  line-height: 1.45;
   color: $color-text-secondary;
-}
-.card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.card-count {
-  font-size: 1.2rem; 
+.card-badge {
+  flex-shrink: 0;
+
+  font-size: 1.2rem;
+  line-height: 1;
   color: $color-text-secondary;
 }
+
+// Desktop
 
 @include respond(desktop) {
-  .card-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: $space-lg;
-    overflow: visible;
+  .slider-arrows {
+    display: inline-flex;
   }
 
-  .card {
-    min-width: auto;
+  .card-list {
+    gap: $space-lg;
   }
 }

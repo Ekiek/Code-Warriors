@@ -1,0 +1,144 @@
+// PLAYER
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $player-height;
+  background: $color-player;
+  border-top: 0.1rem solid $color-border;
+  border-radius: 1rem 1rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  padding: 0 $space-lg;
+  z-index: 20;
+}
+
+/* როცა sidebar ჩანს */
+
+@include respond(desktop) {
+  .player {
+    left: $sidebar-width;
+    width: calc(100% - #{$sidebar-width});
+  }
+}
+
+// LEFT SECTION (controls)
+
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+}
+
+// controls row 
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+// ICONS
+
+.control-btn img {
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0.7;
+  transition: opacity $transition-base,
+              transform $transition-base;
+}
+
+.control-btn:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+// play button 
+
+.play-btn img {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  filter: drop-shadow(0 0 6px #1db95466);
+}
+
+// PROGRESS BAR
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 40rem;
+  max-width: 100%;
+}
+
+.time {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 0.4rem;
+  background: $color-border;
+  border-radius: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress {
+  width: 25%;
+  height: 100%;
+  background: $color-text-primary;
+  border-radius: 2rem;
+}
+
+.progress-bar:hover .progress {
+  background: $color-accent;
+}
+
+// CENTER (song info)
+
+.player-center {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  justify-self: center;
+  padding: 0 $space-lg;
+}
+
+.player-cover {
+  width: 5rem;
+  height: 5rem;
+  border-radius: $radius-sm;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.song-artist {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+
+// RIGHT SECTION
+
+.player-right {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.player-right img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
