@@ -21,10 +21,18 @@
 .layout {
   flex: 1;
   display: flex;
-  min-height: 0;
+  flex-direction: column;
+  min-width: 0;
+  height: 67.5rem;
 }
 
-/* sidebar */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: $space-lg;
+  padding-bottom: $player-height;
+  min-height: 0;
+}
 
 .sidebar {
   width: $sidebar-width;
@@ -34,12 +42,19 @@
   flex-shrink: 0;
 }
 
-/* content */
+@include respond(desktop) {
 
-.content {
-  flex: 1;
-  min-width: 0;   
-  overflow-y: auto;
-  padding: $space-lg;
-  padding-bottom: calc($player-height + $space-lg);
+  .app {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .main {
+    flex: 1;
+  }
+
 }
