@@ -178,7 +178,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.8rem 1.6rem;
+  padding: 1.6rem 1.6rem;
   border-radius: 0.4rem;
   background: transparent;
   border: none;
@@ -190,8 +190,15 @@ body {
   transition: 0.2s ease;
 }
 .sidebar .sidebar-link:hover {
-  background-color: white;
   color: #ffffff;
+}
+.sidebar .sidebar-icon svg {
+  fill: #b3b3b3;
+  transition: 0.2s;
+  margin-right: 0.8rem;
+}
+.sidebar .sidebar-link:hover .sidebar-icon svg {
+  fill: #1db954;
 }
 .sidebar .sidebar-icon,
 .sidebar .sidebar-right-icon {
@@ -203,6 +210,11 @@ body {
   display: block;
   width: 2.2rem;
   height: 2.2rem;
+  opacity: 0.6;
+  transition: 0.2s ease;
+}
+.sidebar button.sidebar-link:hover img {
+  opacity: 1;
 }
 .sidebar .sidebar-icon img {
   margin-right: 0.8rem;
