@@ -1,8 +1,10 @@
 .card-list {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 17rem;
   gap: $space-md;
   overflow-x: auto;
-  padding-bottom: $space-sm;
+  scrollbar-width: none;
 }
 
 .card {
