@@ -179,3 +179,29 @@
     gap: $space-lg;
   }
 }
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.card-pin {
+  position: absolute;
+
+  top: 0.6rem;
+  right: 0.6rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: $color-bg-secondary;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-pin img {
+  width: 1.2rem;
+  height: 1.2rem;
+}

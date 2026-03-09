@@ -76,3 +76,14 @@ The base HTML skeleton has been implemented including:
 - Player layout structure
 
 Markup follows semantic HTML structure.
+
+## Styling Architecture
+
+The project follows modular SCSS architecture:
+
+- abstracts (variables, mixins, functions)
+- base (reset, typography)
+- layout (app layout, header, sidebar, player)
+- components (cards, buttons, chips)
+
+Compiled CSS files are excluded from version control.
