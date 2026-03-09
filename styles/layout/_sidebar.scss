@@ -78,3 +78,40 @@
   background: $color-hover;
   color: $color-text-primary;
 }
+
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  padding-left: 2.8rem;
+
+  transition: max-height 0.3s ease;
+}
+
+.sidebar-submenu.open {
+  max-height: 300px;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  font-size: 1.3rem;
+  color: $color-text-secondary;
+
+  cursor: pointer;
+}
+.playlist-toggle svg {
+  transition: transform 0.25s ease;
+}
+
+.playlist-toggle.active svg {
+  transform: rotate(90deg);
+}
