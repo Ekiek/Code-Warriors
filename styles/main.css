@@ -273,6 +273,46 @@ body {
   padding: 4rem;
 }
 
+.container {
+  max-width: 1400px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: #b3b3b3;
+}
+
+.left-icons img {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+
+.right-icons img {
+  cursor: pointer;
+}
+
+.recent {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filter-all {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .playlist {
   width: 100%;
   border-collapse: collapse;
@@ -306,11 +346,11 @@ td {
 
 .title {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .artist {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #b3b3b3;
 }
 
