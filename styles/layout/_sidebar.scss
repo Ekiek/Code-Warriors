@@ -1,7 +1,7 @@
 .sidebar {
   background: $color-sidebar;
   width: $sidebar-width;
-  padding: $space-lg;
+  padding-top: 6rem;
   
   .sidebar-nav {
     margin-bottom: $space-lg;
@@ -92,6 +92,8 @@
   }
 }
 
+  // playlist-ის მენიუსთვის
+
 .sidebar-item {
   position: relative;
 
@@ -126,4 +128,57 @@
   &:hover {
     color: $color-text-primary;
   }
+}
+
+  // liked-song.html-ისთვის   
+
+body {
+  background: $color-sidebar;
+  color: $color-text-primary;
+  padding: 4rem;
+}
+
+.playlist {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: $color-text-secondary;
+  font-weight: 400;
+  text-align: left;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $color-active;
+}
+
+td {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $color-player;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.song img {
+  width: 4rem;
+  height :4rem;
+  object-fit: cover;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.artist {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+
+.heart {
+  color: $color-accent;
+  font-size: 1.8rem;
 }
