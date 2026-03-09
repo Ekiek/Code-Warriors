@@ -142,6 +142,8 @@ body {
   max-width: 1400px;
 }
 
+//  ცხრილის ზემოთ აიქონებისთვის
+
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -172,11 +174,99 @@ body {
   gap: 0.6rem;
 }
 
+// filter-all-ის ფანჯარისთვის 
+
+.filter {
+  position: relative;
+  display: inline-block;
+}
+
 .filter-all {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  cursor: pointer;
 }
+
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  background: $color-bg-primary;
+  padding: 1rem;
+  border-radius: 0.8rem;
+
+  list-style: none;
+  display: none;
+}
+
+.filter-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: $color-text-primary;
+}
+
+.filter-menu li:hover {
+  background: $color-bg-elevated;
+}
+
+.filter:hover .filter-menu {
+  display: block;
+}
+
+//  ხაზისთვის
+
+.filter-menu hr {
+  border: none;
+  border-top: 1px solid $color-bg-elevated;
+  margin: 1rem 0;
+}
+
+ // group ისთვის
+
+.group-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-li {
+  color: $color-text-primary;
+}
+
+.switch {
+  width: 4rem;
+  height: 2rem;
+  background: $color-active;
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  width: $space-md;
+  height: $space-md;
+  background: $color-text-primary;
+  border-radius: 50%;
+  position: absolute;
+  top: $space-xs;
+  left: $space-xs;
+  transition: 0.3s;
+}
+
+//  გასამწვანებლად
+
+.group-toggle:hover .switch {
+  background: $color-accent; 
+}
+
+.group-toggle:hover .slider {
+  transform: translateX($space-md);
+}
+
+
+// ცხრილისთვის
 
 .playlist {
   width: 100%;

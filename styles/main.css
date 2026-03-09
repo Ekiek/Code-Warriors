@@ -307,10 +307,85 @@ body {
   gap: 0.6rem;
 }
 
+.filter {
+  position: relative;
+  display: inline-block;
+}
+
 .filter-all {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  cursor: pointer;
+}
+
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #121212;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  list-style: none;
+  display: none;
+}
+
+.filter-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.filter-menu li:hover {
+  background: #242424;
+}
+
+.filter:hover .filter-menu {
+  display: block;
+}
+
+.filter-menu hr {
+  border: none;
+  border-top: 1px solid #242424;
+  margin: 1rem 0;
+}
+
+.group-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-li {
+  color: #ffffff;
+}
+
+.switch {
+  width: 4rem;
+  height: 2rem;
+  background: #282828;
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: 0.3s;
+}
+
+.group-toggle:hover .switch {
+  background: #1db954;
+}
+
+.group-toggle:hover .slider {
+  transform: translateX(1.6rem);
 }
 
 .playlist {
