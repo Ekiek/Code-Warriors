@@ -429,9 +429,11 @@ td {
   color: #b3b3b3;
 }
 
-.heart {
-  color: #1db954;
-  font-size: 1.8rem;
+.heart img {
+  width: 2rem;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .card-list {

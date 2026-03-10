@@ -308,7 +308,12 @@ td {
   color: $color-text-secondary;
 }
 
-.heart {
-  color: $color-accent;
-  font-size: 1.8rem;
+
+
+.heart img {
+  width: 2rem;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
