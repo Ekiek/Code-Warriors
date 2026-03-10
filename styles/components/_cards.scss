@@ -78,7 +78,13 @@
     display: none;
   }
 }
+@media (max-width: 768px) {
 
+  .cards-scroll {
+    overflow: visible;
+  }
+
+}
 // Card Row
 
 .card-list {
@@ -238,4 +244,23 @@
 .browse-card:hover {
   transform: scale(1.03);
   transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+
+  .card-list {
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    min-width: unset;
+  }
+  .slider-arrows {
+    display: none;
+  }
+
 }
