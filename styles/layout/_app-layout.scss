@@ -92,3 +92,60 @@
     display: none;
   }
 }
+// search html
+.browse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.4rem;
+}
+
+.browse-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.browse-subtitle {
+  font-size: 1.4rem;
+  color: $color-text-secondary;
+}
+
+.browse-scroll {
+  overflow-x: auto;
+}
+
+.browse-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.browse-grid {
+  display: flex;
+  gap: 1.6rem;
+
+  width: max-content;
+}
+
+.browse {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  border: none;
+
+  cursor: pointer;
+}

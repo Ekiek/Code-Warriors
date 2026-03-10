@@ -16,7 +16,7 @@
         <ul class="header-list">
           
           <li class="header-item">
-            <button class="header-button" onclick="window.location.href='MyLibrary.html'">
+            <button class="header-button"  onclick="window.location.href='MyLibrary.html'">
               <span class="header-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.14307 3.14307V20.4299" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
@@ -174,9 +174,7 @@
 
       </ul>
 
-    
-
-        <li class="sidebar-item">
+            <li class="sidebar-item">
           <button class="sidebar-link">
             <span class="sidebar-icon">
               <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,43 +267,35 @@
     <!-- scrollable -->
     <main class="content">
 
-      <!-- filters -->
+      <!-- filters
       <div class="filters">
-        <button class="control-btn"><img src="./assets/icons/my l1.svg" alt=""></button>
-        <button class="control-btn"><img src="./assets/icons/my l2.svg" alt=""></button>
-        <button class="control-btn"><img src="./assets/icons/my l3.svg" alt="">Recent</button>
-        <button class="control-btn"><img src="./assets/icons/my l4.svg" alt="">Group</button>
-        <button class="control-btn"><img src="./assets/icons/my l5.svg" alt=""></button>
-        <button class="control-btn add-btn"><img src="./assets/icons/my l6.svg" alt=""></button>
-      </div>
+        <button class="chip chip-active">All</button>
+        <button class="chip">Music</button>
+        <button class="chip">Podcasts</button>
+        <button class="chip">Audiobooks</button>
+      </div> -->
 
       <!-- section -->
         <section class="section">
-     
+
+        <div class="section-header">
+        <h2 class="section-title">Recent searches</h2>
+       
+        </div>
         <div class="cards-scroll">
         <div class="card-list">
 
             <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
+            <img src="./assets/images/search.png" alt="playlist cover" class="card-image">
             <div class="card-meta">
-            <h3 class="card-title">Liked songs</h3>
-            <span class="card-badge">50</span>
+            <h3 class="card-title">Daft Punk</h3>
+            <span class="card-badge"></span>
             </div>
-            <p class="card-subtitle">Numb, Crawling, In the End, and more</p>
+            <p class="card-subtitle"></p>
             </div>
 
             <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary 1.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
+            <img src="./assets/images/search1.png" alt="playlist cover" class="card-image">
             <div class="card-meta">
             <h3 class="card-title">David Bowie</h3>
             <span class="card-badge"></span>
@@ -314,207 +304,286 @@
             </div>
 
             <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary 3.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
+            <img src="./assets/images/23.png" alt="playlist cover" class="card-image">
             <div class="card-meta">
-            <h3 class="card-title">Daft punk</h3>
+            <h3 class="card-title">Black Holes...</h3>
             <span class="card-badge"></span>
             </div>
-            <p class="card-subtitle"></p>
-            </div>
-
-            <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary 4.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Chill Stuff</h3>
-            <span class="card-badge">152</span>
-            </div>
-            <p class="card-subtitle">Simon and Garfunkel, Daft Punk, and more</p>
-            </div>
-
-            <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary 5.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Fav bands</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Linkin Park, Muse, and more</p>
-            </div>
-
-            <div class="card">
-            <div class="card-image-wrapper">
-            <img src="./assets/icons/mylibrary 4.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Chill Stuff</h3>
-            <span class="card-badge">152</span>
-            </div>
-            <p class="card-subtitle">Simon and Garfunkel, Daft Punk, and more</p>
-            </div>
-
-            <div class="card">
-            <div class="card-image-wrapper"> 
-            <img src="./assets/icons/mylibrary 4.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Chill Stuff</h3>
-            <span class="card-badge">152</span>
-            </div>
-            <p class="card-subtitle">Simon and Garfunkel, Daft Punk, and more</p>
-            </div>
-
-            <div class="card">
-           <div class="card-image-wrapper"> 
-            <img src="./assets/icons/mylibrary 5.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Chill Stuff</h3>
-            <span class="card-badge">152</span>
-            </div>
-            <p class="card-subtitle">Simon and Garfunkel, Daft Punk, and more</p>
+            <p class="card-subtitle">Muse</p>
             </div>
         </div>
         </div>
       </section>
-       <section class="section">
-        <div class="cards-scroll">
-        <div class="card-list">
-            <div class="card">
-            <div class="card-image-wrapper"> 
-            <img src="./assets/icons/mylibrary 5(1).png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Meteora</h3>
-            <span class="card-badge"></span>
-            </div>
-            <p class="card-subtitle">Linkin Park</p>
-            </div>
 
-            <div class="card">
-            <div class="card-image-wrapper"> 
-            <img src="./assets/icons/mylibrary 6.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Random Access Memories</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Daft Punk</p>
-            </div>
+      <section class="browse">
 
-            <div class="card">
-            <div class="card-image-wrapper"> 
-            <img src="./assets/icons/mylibrary 7.png" alt="playlist cover" class="card-image">
-            <span class="card-pin">
-            <img src="./assets/icons/pin.svg" alt="">
-            </span>
-            </div>
-            <div class="card-meta">
-            <h3 class="card-title">Abbey Road</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">The Beatles</p>
-            </div>
+     <div class="browse-header">
 
-            <div class="card">
-            <img src="./assets/icons/mylibrary 8.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and Revelations</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Muse</p>
-            </div>
+      <div class="browse-header-left">
+      <h2 class="section-title">Browse all</h2>
+      <h3 class="browse-subtitle">Discover</h3>
+     </div>
 
-            <div class="card">
-            <img src="./assets/images/14.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and Revelations</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Muse</p>
-            </div>
+     <div class="slider-arrows">
+      <button class="arrow arrow-left"></button>
+      <button class="arrow arrow-right"></button>
+     </div>
 
-           <div class="card">
-            <img src="./assets/images/15.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and Revelations</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Muse</p>
-            </div>
+     </div>
 
-           <div class="card">
-            <img src="./assets/images/16.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and Revelations</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Muse</p>
-            </div>
+     <div class="browse-scroll">
 
-            <div class="card">
-            <img src="./assets/images/17.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and Revelations</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Muse</p>
-            </div>
-        </div>
-        </section>
+     <div class="browse-grid">
 
-        <section class="section">
-        <div class="cards-scroll">
-        <div class="card-list">
-          <div class="card">
-            <img src="./assets/icons/mylibrary 9.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Chill Mixs</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
-            </div>
+     <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (1).png" class="browse-card-image">
+      </div>
 
-            <div class="card">
-            <img src="./assets/icons/mylibrary 10.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Pop Mix</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
-            </div>
-        </div>
-        </div>
-        </section>
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (2).png" class="browse-card-image">
+      </div>
 
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (3).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-pink">
+        <h3 class="browse-card-title">Trending</h3>
+        <img src="./assets/images/search1 (4).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-yellow">
+        <h3 class="browse-card-title">Decades</h3>
+        <img src="./assets/images/search1 (5).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (6).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (7).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (8).png" class="browse-card-image">
+      </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+      <section class="browse">
+
+     <div class="browse-header">
+
+      <div class="browse-header-left">
+      <h3 class="browse-subtitle">Genre</h3>
+     </div>
+
+     <div class="slider-arrows">
+      <button class="arrow arrow-left"></button>
+      <button class="arrow arrow-right"></button>
+     </div>
+
+     </div>
+
+     <div class="browse-scroll">
+
+     <div class="browse-grid">
+
+     <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (9).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (10).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (11).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-pink">
+        <h3 class="browse-card-title">Trending</h3>
+        <img src="./assets/images/search1 (12).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-yellow">
+        <h3 class="browse-card-title">Decades</h3>
+        <img src="./assets/images/search1 (13).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (14).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (15).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (16).png" class="browse-card-image">
+      </div>
+
+    </div>
+
+    </div>
+
+    </section>
+     <section class="browse">
+
+     <div class="browse-header">
+
+      <div class="browse-header-left">
+      <h3 class="browse-subtitle">Mood & activity</h3>
+     </div>
+
+     <div class="slider-arrows">
+      <button class="arrow arrow-left"></button>
+      <button class="arrow arrow-right"></button>
+     </div>
+
+     </div>
+
+     <div class="browse-scroll">
+
+     <div class="browse-grid">
+
+     <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Mood and activity</h3>
+      <img src="./assets/images/search1 (9).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (10).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (11).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-pink">
+        <h3 class="browse-card-title">Trending</h3>
+        <img src="./assets/images/search1 (12).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-yellow">
+        <h3 class="browse-card-title">Decades</h3>
+        <img src="./assets/images/search1 (13).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (14).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (15).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (16).png" class="browse-card-image">
+      </div>
+
+    </div>
+
+    </div>
+
+    </section>
+    <section class="browse">
+
+     <div class="browse-header">
+
+      <div class="browse-header-left">
+      <h3 class="browse-subtitle">Podcast</h3>
+     </div>
+
+     </div>
+
+     <div class="browse-scroll">
+
+     <div class="browse-grid">
+
+     <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (1).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (2).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (3).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-pink">
+        <h3 class="browse-card-title">Trending</h3>
+        <img src="./assets/images/search1 (4).png" class="browse-card-image">
+      </div>
+
+      </div>
+
+    </div>
+
+    </section>
+    <section class="browse">
+
+     <div class="browse-header">
+
+      <div class="browse-header-left">
+      <h3 class="browse-subtitle">Audiobooks</h3>
+     </div>
+     </div>
+
+     <div class="browse-scroll">
+     <div class="browse-grid">
+     <div class="browse-card browse-blue">
+      <h3 class="browse-card-title">Made For You</h3>
+      <img src="./assets/images/search1 (1).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-orange">
+        <h3 class="browse-card-title">New Releases</h3>
+        <img src="./assets/images/search1 (2).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-purple">
+        <h3 class="browse-card-title">Spotify Classics</h3>
+        <img src="./assets/images/search1 (3).png" class="browse-card-image">
+      </div>
+
+      <div class="browse-card browse-pink">
+        <h3 class="browse-card-title">Trending</h3>
+        <img src="./assets/images/search1 (4).png" class="browse-card-image">
+      </div>
+
+     </div>
+
+    </div>
+
+    </section>
     </main>
    </div>
   </div>

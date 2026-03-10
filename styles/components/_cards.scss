@@ -109,9 +109,8 @@
 // Card
 
 .card {
-  width: 17rem;
-  min-width: 17rem;
-
+  width: 16rem;
+  min-width: 15rem;
   padding: $space-md;
   border-radius: $radius-md;
   background-color: $color-bg-secondary;
@@ -204,4 +203,39 @@
 .card-pin img {
   width: 1.2rem;
   height: 1.2rem;
+}
+
+// cards for search html
+.browse-card {
+  position: relative;
+  width: 14rem;
+  height: 16rem;
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.browse-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.browse-card-image {
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  transform: rotate(25deg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.browse-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
 }
