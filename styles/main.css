@@ -55,6 +55,7 @@ body {
 
 .layout {
   display: flex;
+  flex: 1;
 }
 
 .header {
@@ -69,6 +70,7 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
+  flex: 0 0 24rem;
   width: 24rem;
   background-color: #000000;
 }
@@ -274,7 +276,8 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .toolbar {
@@ -390,26 +393,38 @@ body {
 
 .playlist {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 }
 
 th {
   color: #b3b3b3;
-  font-weight: 400;
+  font-size: 1.8rem;
   text-align: left;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #282828;
 }
 
 td {
-  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+.song-row {
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.song-row:hover {
+  background-color: #242424;
   border-bottom: 1px solid #181818;
 }
 
 .song {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .song img {
@@ -429,11 +444,53 @@ td {
   color: #b3b3b3;
 }
 
-.heart img {
-  width: 2rem;
-  opacity: 1;
+.heart-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding-right: 4rem;
+}
+
+.actions img {
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.2s;
+  margin-right: 4rem;
+}
+
+.actions img:hover {
+  transform: scale(1.2);
+}
+
+.like-btn {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.play-circle {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #b3b3b3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  position: relative;
+  margin-left: auto;
+}
+
+.play-circle.active {
+  background-color: #1db954;
+  border-color: #1db954;
 }
 
 .card-list {

@@ -6,6 +6,7 @@
 
 .layout{
   display: flex;
+  flex: 1;
 }
 
 .header {
@@ -20,6 +21,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  flex: 0 0 $sidebar-width;
   width: $sidebar-width;
   background-color: $color-sidebar;
 }

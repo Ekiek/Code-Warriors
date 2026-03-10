@@ -1,3 +1,5 @@
+//  sidebar-ის მენიუსთვის
+
 .sidebar {
   background: $color-sidebar;
   width: $sidebar-width;
@@ -51,6 +53,8 @@
     transition: 0.2s;
     margin-right: 0.8rem;
   }
+
+    //  პინის გასამწვანებლად
 
   .sidebar-link:hover .sidebar-icon svg {
     fill: $color-accent;
@@ -139,7 +143,8 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 //  ცხრილის ზემოთ აიქონებისთვის
@@ -270,26 +275,43 @@ body {
 
 .playlist {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 }
 
 th {
   color: $color-text-secondary;
-  font-weight: 400;
+  font-size: 1.8rem;
   text-align: left;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid $color-active;
 }
 
 td {
-  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+
+  //  Row hover 
+  
+.song-row {
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.song-row:hover {
+  background-color: $color-bg-elevated;
+  // ზოლი ჰოვერზე
   border-bottom: 1px solid $color-player;
 }
+
+ //  Song
 
 .song {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .song img {
@@ -309,11 +331,56 @@ td {
 }
 
 
+//  Heart + Plus + More 
+.heart-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-.heart img {
-  width: 2rem;
-  opacity: 1;
+// Heart + Plus + More გვერდულად
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding-right: 4rem;
+}
+
+.actions img {
+  width: 2.5rem;  
+  height: 2.5rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.2s;
+  margin-right: 4rem;
+}
+
+.actions img:hover {
+  transform: scale(1.2);
+}
+
+// Heart ყოველთვის ხილული
+.like-btn {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+//  Play-circle მარჯვნივ 
+
+.play-circle {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid $color-text-secondary;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  position: relative;
+  margin-left: auto;
+}
+.play-circle.active {
+  background-color: $color-accent;
+  border-color: $color-accent;
 }
 
