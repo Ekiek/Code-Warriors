@@ -72,11 +72,44 @@
 
 
 //  discover-ისთვის
+//  ზედა ნაწილი კატეგორიების
+.discover-header {
+  display: flex;
+  gap: 1rem;
+  background-color: $color-bg-primary; 
+  padding: 1rem 2rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
+}
 
+.discover-header .category {
+  color: $color-text-primary;
+  background: transparent;
+  border: 0.1rem solid $color-text-primary;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+  //  ტექსტის ჰოვერისთვის
+.discover-header .category:hover {
+  background-color: $color-text-secondary;
+  border-color: $color-text-primary;
+}
+ 
+  // music ფერისთვის
+.discover-header .category.active {
+  background-color: $color-text-secondary;
+  border-color: $color-text-primary;
+}
+
+  // card-ებისთვის
 .discover {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  background-color: $color-discover;
 }
 
 .discover-card {
@@ -87,8 +120,8 @@
 }
 
 .discover-image img {
-  width: 420px;
-  border-radius: 20px;
+  width: 42rem;
+  border-radius: 2rem;
 }
 
 .playlist {
@@ -98,8 +131,8 @@
 }
 
 .cover {
-  width: 160px;
-  border-radius: 12px;
+  width: 16rem;
+  border-radius: 1.2rem;
 }
 
 .text h1 {
@@ -108,8 +141,13 @@
 }
 
 .text p {
-  color: #9ca3af;
+  color: $color-text-secondary;
   font-size: 1.4rem;
+}
+
+.bold-text {
+  font-weight: 700; /* გამუქება */
+  color: #fff;      /* სურვილის მიხედვით ფერი */
 }
 
 .actions {
@@ -124,27 +162,29 @@
 }
 
 .tags span {
-  border: 1px solid #3f3f46;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin-right: 8px;
+  border: 0.1rem solid $color-bg-elevated;
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
 }
 
+//  სურათის ქვედა ნაწილის აიქონი
 .discover-image {
-  position: relative; /* აუცილებელია overlay-სთვის */
+  position: relative; 
 }
 
 .line-icon {
   position: absolute;
-  bottom: 16px;       /* სურათის ქვედა ნაწილი */
-  left: 50%;           /* შუაში */
+  bottom: 1.6rem;       
+  left: 50%;           
   transform: translateX(-50%);
-  width: 60px;         /* ზომა შეგიძლიათ შეცვალოთ */
+  width: 6rem;       
   cursor: pointer;
   transition: transform 0.2s;
 }
 
 .line-icon:hover {
-  transform: translateX(-50%) scale(1.1); /* hover effect */
+  transform: translateX(-50%) scale(1.1); 
 }
+
