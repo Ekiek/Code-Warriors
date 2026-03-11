@@ -68,3 +68,120 @@
 .lock-btn.active svg {
   stroke: #fff;
 }
+
+
+//  discover-ისთვის
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+//  ზედა მხარე კატეგორიები
+.categories {
+  display: flex;
+  gap: $space-sm;
+  margin-bottom: $space-xl;
+  width: 100%;
+}
+
+.categories span {
+  padding: $radius-md $space-md;
+  background: $color-bg-elevated;
+  color: $color-text-primary;
+  border-radius: 2rem;
+  font-size: $space-md;
+}
+
+.categories .active {
+  background: $color-text-primary;
+  color: $color-bg-primary;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background: $color-text-secondary;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.image {
+  width: 26rem;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 2rem;
+  display: block;
+}
+
+.lines {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.playlist {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cover {
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.info {
+  max-width: 40rem;
+}
+
+.info h1 {
+  color: $color-text-primary;
+  margin: 0 0 1rem 0;
+  white-space: nowrap;
+}
+
+.info-text {
+  color: $color-text-secondary;
+}
+
+.info-text .spotify {
+  color: $color-text-primary;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.actions img {
+  width: 4rem;
+  cursor: pointer;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  border: 0.1rem solid $color-player;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  margin-right: 0.8rem;
+  font-size: 1.4rem;
+}
