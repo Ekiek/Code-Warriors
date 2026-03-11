@@ -145,9 +145,10 @@
   font-size: 1.4rem;
 }
 
+//  spotify-ის გასამუქებლად
 .bold-text {
-  font-weight: 700; /* გამუქება */
-  color: #fff;      /* სურვილის მიხედვით ფერი */
+  font-weight: 700;
+  color: $color-text-primary;      
 }
 
 .actions {
