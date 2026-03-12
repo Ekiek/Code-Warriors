@@ -64,3 +64,11 @@ document.querySelectorAll(".browse").forEach((section) => {
   });
 
 });
+
+// liked song
+
+document.querySelectorAll(".play-circle").forEach(circle => {
+  circle.addEventListener("click", () => {
+    circle.classList.toggle("active");
+  });
+});

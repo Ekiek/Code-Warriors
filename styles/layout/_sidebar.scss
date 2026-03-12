@@ -1,6 +1,6 @@
 // Sidebar
 
-.sidebar {
+.sidebar {  
   display: none;
   width: $sidebar-width;
   flex-shrink: 0;
@@ -114,4 +114,181 @@
 
 .playlist-toggle.active svg {
   transform: rotate(90deg);
+}
+
+// Liked Songs Playlist
+.container {
+  width: 100%;
+  padding: 4rem;
+}
+
+// toolbar
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.left-icons img {
+  width: 2.4rem;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.recent,
+.filter-all {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: $color-text-secondary;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.search img {
+  width: 2rem;
+  cursor: pointer;
+}
+
+// TABLE
+
+.playlist {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.playlist thead th {
+  text-align: left;
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid $color-border;
+}
+
+.playlist tbody tr {
+  transition: background 0.2s ease;
+}
+
+.song-row {
+  height: 6rem;
+  transition: background 0.2s ease;
+}
+
+.song-row:hover {
+  background: $color-hover;
+}
+
+// SONG CELL
+.song {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.song img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+}
+.title {
+  font-size: 1.4rem;
+  color: $color-text-primary;
+}
+
+.artist {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+}
+
+// HEART + ACTIONS
+.heart-actions {
+  position: relative;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+// heart
+.like-btn {
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+// hidden icons 
+.action-icon {
+  width: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+// show on hover 
+
+.song-row:hover .action-icon {
+  opacity: 1;
+}
+
+// PLAY CIRCLE
+
+.play-circle {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.2rem solid $color-text-secondary;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+// hover show 
+.song-row:hover .play-circle {
+  opacity: 1;
+}
+
+// active state 
+
+.play-circle.active {
+  background: $color-accent;
+  border-color: $color-accent;
+}
+
+// TABLE SPACING
+.playlist td {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  color: $color-text-secondary;
+  padding: 1rem;
+}
+
+// duration
+
+.playlist td:nth-child(4) {
+  width: 8rem;
+}
+
+// action column 
+
+.playlist td:last-child {
+  width: 16rem;
+}
+
+.playlist th:nth-child(2),
+.playlist td:nth-child(2) {
+  width: 40%;
+}
+
+.playlist td:nth-child(3) {
+  color: $color-text-secondary;
+}
+
+.playlist td:nth-child(4) {
+  text-align: right;
 }
