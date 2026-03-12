@@ -276,23 +276,30 @@ body {
 // ცხრილისთვის
 
 .playlist {
+  display: table-cell;
   width: 100%;
   max-width: 100%;
+  margin: 0 auto;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  vertical-align: top;
 }
 
 th {
+  vertical-align: top;
+  padding: 0.5rem 1rem;
   color: $color-text-secondary;
   font-size: 1.8rem;
   text-align: left;
-  padding-bottom: 1.5rem;
   border-bottom: 1px solid $color-active;
 }
 
 td {
   font-size: 1.4rem;
   padding: 1rem 1rem;
-  vertical-align: middle;
 }
 
   //  Row hover 
@@ -381,6 +388,7 @@ td {
   position: relative;
   margin-left: auto;
 }
+
 .play-circle.active {
   background-color: $color-accent;
   border-color: $color-accent;
