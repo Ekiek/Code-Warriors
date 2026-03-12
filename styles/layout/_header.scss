@@ -189,3 +189,20 @@
   transform: translateX(-50%) scale(1.1); 
 }
 
+
+//  hover ეფექტი სურათებს და აიქონებს
+.discover-image img,
+.discover-info .cover,
+.actions img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discover-image img:hover,
+.discover-info .cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 3rem $color-hover;
+}
+
+.actions img:hover {
+  transform: scale(1.1);
+}
