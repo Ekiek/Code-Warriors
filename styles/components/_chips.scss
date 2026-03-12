@@ -36,6 +36,16 @@
   transform: scale(0.96);
 }
 
+@media (max-width: 768px) {
+
+  .filters {
+    display: flex;
+    gap: $space-sm;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+}
 
 
 

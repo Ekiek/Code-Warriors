@@ -267,16 +267,24 @@
     <!-- scrollable -->
     <main class="content">
 
-      <!-- filters
-      <div class="filters">
-        <button class="chip chip-active">All</button>
-        <button class="chip">Music</button>
-        <button class="chip">Podcasts</button>
-        <button class="chip">Audiobooks</button>
-      </div> -->
+     <!-- section -->
+      <section class="mobile-search">
+      <div class="search-wrapper">
+        <div class="search-bar">
+          <input 
+            type="text"
+            placeholder="What do you want to play?"
+            class="search-input"
+          >
+          <img src="./assets/icons/search.svg" class="search-icon">
+        </div>
+        <button class="camera-btn">
+          <img src="./assets/icons/camera.svg">
+        </button>
+      </div>
+      </section>
 
-      <!-- section -->
-        <section class="section">
+      <section class="section recent-searches">
 
         <div class="section-header">
         <h2 class="section-title">Recent searches</h2>
@@ -669,7 +677,34 @@
   </div>
 
 </footer>
+<nav class="mobile-nav">
 
+  <button class="mobile-nav-item active" onclick="window.location.href='index.html'">
+    <img src="./assets/icons/header 2.svg">
+    <span>Home</span>
+  </button>
+
+  <button class="mobile-nav-item">
+    <img src="./assets/icons/header 3.svg">
+    <span>Discover</span>
+  </button>
+
+  <button class="mobile-nav-item" onclick="window.location.href='search.html'">
+    <img src="./assets/icons/search.svg">
+    <span>Search</span>
+  </button>
+
+  <button class="mobile-nav-item" onclick="window.location.href='MyLibrary.html'">
+    <img src="./assets/icons/header 1.svg">
+    <span>Library</span>
+  </button>
+
+  <button class="mobile-nav-item">
+    <img src="./assets/icons/Me.svg">
+    <span>Me</span>
+  </button>
+
+</nav>
 </body>
 </html>
 

@@ -81,10 +81,26 @@
 @media (max-width: 768px) {
 
   .cards-scroll {
-    overflow: visible;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cards-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-list {
+    display: flex;
+    gap: 1.6rem;
+    width: max-content;
+  }
+
+  .card {
+    min-width: 16rem;
   }
 
 }
+
 // Card Row
 
 .card-list {
@@ -246,21 +262,28 @@
   transition: transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .card-list {
-    grid-auto-flow: row;
-    grid-auto-columns: unset;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+  .browse-scroll{
+    overflow:visible;
   }
 
-  .card {
-    width: 100%;
-    min-width: unset;
+  .browse-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem;
+    width:100%;
   }
-  .slider-arrows {
-    display: none;
+
+  .browse-card{
+    width:100%;
+    height:11rem;
+  }
+.content{
+    padding:1.6rem;
+  }
+  .recent-searches{
+    display:none;
   }
 
 }
