@@ -28,16 +28,6 @@ lockBtn.addEventListener("click", () => {
   lockBtn.classList.toggle("active");
 });
 
-const playlistToggle = document.querySelector(".playlist-toggle");
-const submenu = document.querySelector(".sidebar-submenu");
-
-playlistToggle.addEventListener("click", () => {
-
-  submenu.classList.toggle("open");
-
-  playlistToggle.classList.toggle("active");
-
-});
 
 // header html arrows
 
