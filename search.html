@@ -40,7 +40,7 @@
           </li>
 
           <li class="header-item">
-            <button class="header-button">
+            <button class="header-button" onclick="window.location.href='Discover.html'">
               <span class="header-icon">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.8042 21.8062C14.0298 17.441 17.441 14.0298 21.8062 12.8042L23.6011 12.3003L21.8062 11.7964C17.441 10.5708 14.0298 7.1596 12.8042 2.79443L12.3003 0.999512L11.7964 2.79443C10.5708 7.1596 7.1596 10.5708 2.79443 11.7964L0.999512 12.3003L2.79443 12.8042C7.1596 14.0298 10.5708 17.441 11.7964 21.8062L12.3003 23.6011L12.8042 21.8062Z" stroke="#898989" stroke-width="2"/>
@@ -175,7 +175,7 @@
       </ul>
 
             <li class="sidebar-item">
-          <button class="sidebar-link">
+          <button class="sidebar-link" onclick="window.location.href='liked-song.html'"> 
             <span class="sidebar-icon">
               <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.1336 2.36517L11.2698 4.17112L9.40593 2.36518C7.45157 0.471504 4.31642 0.57606 2.49256 2.59574C0.7228 4.55551 0.47915 7.49092 2.08172 9.58963C2.27865 9.84753 2.47228 10.0945 2.65656 10.3206C3.823 11.7515 6.36801 14.2505 7.64315 15.5916C8.58524 16.5824 9.43207 17.4087 10.07 18.0106C10.7438 18.6462 11.7837 18.6323 12.4587 17.9981C13.6351 16.8927 15.439 15.171 16.7097 13.8346C17.9848 12.4935 18.7165 11.7515 19.883 10.3206C20.0672 10.0945 20.2609 9.84753 20.4578 9.58963C22.0604 7.49092 21.8167 4.55551 20.047 2.59574C18.2231 0.57606 15.088 0.471502 13.1336 2.36517Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
@@ -635,15 +635,21 @@
   </div>
   </div>
   <!-- center-->
-  <div class="player-center">
+<div class="player-center">
     <img src="./assets/images/player.png" alt="cover" class="player-cover">
     <div class="player-info">
       <div class="song-title">Get Lucky</div>
       <div class="song-artist">Daft Punk</div>
     </div>
-    
-  </div>
- 
+      <button class="control-btn">
+        <img src="./assets/icons/add.svg">
+      </button>
+
+      <button class="control-btn">
+        <img src="./assets/icons/play.svg">
+      </button>
+    </div>
+  
   
   <!-- RIGHT -->
     
@@ -684,7 +690,7 @@
     <span>Home</span>
   </button>
 
-  <button class="mobile-nav-item">
+  <button class="mobile-nav-item" onclick="window.location.href='Discover.html'">
     <img src="./assets/icons/header 3.svg">
     <span>Discover</span>
   </button>

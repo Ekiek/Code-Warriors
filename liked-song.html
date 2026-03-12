@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Markup</title>
-  <link rel="stylesheet" href="styles/main.css">
-</head>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Liked Songs</title>
+</head>
 <body>
 
 <div class="app">
@@ -146,7 +146,7 @@
             </span>
           </button>
           <ul class="sidebar-submenu">
-
+         </li>
         <li class="submenu-item">
           <img src="./assets/icons/sidebar 2.svg">
           <span>Chill stuff</span>
@@ -261,390 +261,233 @@
       </ul>
     </nav>
   </aside>
+            <div class="main">
 
-  <!-- main -->
-  <div class="main">
-    <!-- scrollable -->
-    <main class="content">
-      <!-- filters -->
-      <div class="filters">
-        <button class="chip chip-active">All</button>
-        <button class="chip">Music</button>
-        <button class="chip">Podcasts</button>
-        <button class="chip">Audiobooks</button>
-      </div>
-      <!-- card for mobile version -->
-        <div class="mobile-cards">
-        <div class="mobile-card">
-          <img src="./assets/images/18.png" alt="">
-          <span>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</span>
-         </div>
 
-        <div class="mobile-card">
-          <img src="./assets/images/3.png" alt="">
-          <span>Daily Mix 2</span>
-        </div>
 
-         <div class="mobile-card">
-          <img src="./assets/images/2.png" alt="">
-          <span>Daily Mix 1</span>
-        </div>
+                <!-- scrollable -->
+                <main class="content">
 
-        <div class="mobile-card">
-          <img src="./assets/images/18.png" alt="">
-          <span>Instant Crush</span>
-         </div>
+                    <div class="container">
 
-        <div class="mobile-card">
-          <img src="./assets/images/18.png" alt="">
-          <span>Instant Crush</span>
-         </div>
+                        <div class="toolbar">
+                            <div class="left-icons">
+                                <img src="./assets/icons/playlist 1.svg" alt="play icon">
+                            </div>
 
-        <div class="mobile-card">
-          <img src="./assets/images/9.png" alt="">
-          <span>Rock Mix</span>
-         </div>
+                            <div class="right-icons">
+                                <img src="./assets/icons/playlist 2.svg" alt="play icon">
+                                <img src="./assets/icons/playlist 3.svg" alt="play icon">
 
-      </div>
-      <!-- section -->
-        <section class="section">
 
-        <div class="section-header">
-        <h2 class="section-title">Made For You</h2>
-        <div class="slider-arrows">
-        <button class="arrow arrow-left"></button>
-        <button class="arrow arrow-right"></button>
-        </div>
-        </div>
-        <div class="cards-scroll">
-        <div class="card-list">
+                                <div class="recent">
+                                    <img src="./assets/icons/playlist 4.svg" alt="play icon">
+                                    <span>Recent</span>
+                                </div>
 
-            <div class="card">
-            <img src="./assets/images/1.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Discover Weekly</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Your weekly mixtape of fresh music.</p>
-            </div>
+                                <div class="search">
+                                    <img src="./assets/icons/playlist 6.svg" alt="play icon">
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="card">
-            <img src="./assets/images/2.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 1</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Linkin Park, System Of A Down, Coal Chamber...</p>
-            </div>
+                        <table class="playlist">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Album</th>
+                                    <th>Duration</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="song-row">
+                                    <td>1</td>
+                                    <td class="song">
+                                        <img src="./assets/images/player.png" alt="song cover">
+                                        <div>
+                                            <p class="title">Get Lucky</p>
+                                            <span class="artist">Daft Punk</span>
+                                        </div>
+                                    </td>
+                                    <td>Random Access Memories</td>
+                                    <td>4:35</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-filled.svg" alt="heart icon">
 
-            <div class="card">
-            <img src="./assets/images/3.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 2</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Avril Lavigne, Lorde, Charli XCX and more</p>
-            </div>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-            <div class="card">
-            <img src="./assets/images/4.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 3</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-            </div>
+                                            <span class="play-circle"></span>
+                                        </div>
+                                    </td>
+                                </tr>
 
-            <div class="card">
-            <img src="./assets/images/5.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 4</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Chuck Berry, Elvis Presley, Roy Orbison and more</p>
-            </div>
+                                <tr class="song-row">
+                                    <td>2</td>
+                                    <td class="song">
+                                        <img src="./assets/images/player.png" alt="song cover">
+                                        <div>
+                                            <p class="title">Instant Crush</p>
+                                            <span class="artist">Daft Punk, Julian Casablancas</span>
+                                        </div>
+                                    </td>
+                                    <td>Random Access Memories</td>
+                                    <td>5:37</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
 
-            <div class="card">
-            <img src="./assets/images/6.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 5</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
-            </div>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-            <div class="card">
-            <img src="./assets/images/7.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Nirvana Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-            </div>
+                                            <span class="play-circle"></span>
+                                        </div>
+                                    </td>
+                                </tr>
 
-            <div class="card">
-            <img src="./assets/images/8.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Fall Out Boy Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">With Panic! At The Disco, The All-American Rejects,...</p>
-            </div>
-        </div>
-        </div>
-      </section>
-       <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">Your Top Mixes</h2>
-            <div class="slider-arrows">
-      <button class="arrow arrow-left"></button>
-      <button class="arrow arrow-right"></button>
-      </div>
-        </div>
-        <div class="cards-scroll">
-        <div class="card-list">
-            <div class="card">
-            <img src="./assets/images/9.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 4</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Chuck Berry, Elvis Presley, Roy Orbison and more</p>
-            </div>
+                                <tr class="song-row">
+                                    <td>3</td>
+                                    <td class="song">
+                                        <img src="./assets/images/playlist 2.png" alt="song cover">
+                                        <div>
+                                            <p class="title">On Melancholy Hill</p>
+                                            <span class="artist">Gorillaz</span>
+                                        </div>
+                                    </td>
+                                    <td>Plastic Beach</td>
+                                    <td>3:53</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
 
-            <div class="card">
-            <img src="./assets/images/10.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 5</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
-            </div>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-            <div class="card">
-            <img src="./assets/images/11.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Nirvana Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-            </div>
+                                            <span class="play-circle"></span>
 
-            <div class="card">
-            <img src="./assets/images/12.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Fall Out Boy Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">With Panic! At The Disco, The All-American Rejects,...</p>
-            </div>
+                                        </div>
+                                    </td>
+                                </tr>
 
-            <div class="card">
-            <img src="./assets/images/13.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Adele Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">With Sia, Sam Smith, P!nk and more</p>
-            </div>
+                                <tr class="song-row">
+                                    <td>4</td>
+                                    <td class="song">
+                                        <img src="./assets/images/playlist 3.png" alt="song cover">
+                                        <div>
+                                            <p class="title">Tainted Love</p>
+                                            <span class="artist">Soft Cell</span>
+                                        </div>
+                                    </td>
+                                    <td>Non-Stop Erotic Cabaret</td>
+                                    <td>2:33</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
 
-            <div class="card">
-            <img src="./assets/images/14.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daft Punk Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">With Justice, The Chemical Brothers, ...</p>
-            </div>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-            <div class="card">
-            <img src="./assets/images/15.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">ABBA Radio</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">With Honey M., Bee Gees, Bonnie Tyler, and more</p>
-            </div>
+                                            <span class="play-circle"></span>
 
-            <div class="card">
-            <img src="./assets/images/16.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Daily Mix 6</h3>
-            <span class="card-badge">50</span>
-            </div>
-            <p class="card-subtitle">One Direction, Avril Lavigne, Lorde, and more</p>
-            </div>
-          </div>
-        </div>
-        </section>
+                                        </div>
+                                    </td>
+                                </tr>
 
-        <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">Your Favorite Artists</h2>
-          <div class="slider-arrows">
-          <button class="arrow arrow-left"></button>
-          <button class="arrow arrow-right"></button>
-          </div>
-          </div>
-        <div class="cards-scroll">
-        <div class="card-list">
-          <div class="card">
-            <img src="./assets/images/17.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Guns N' Roses</h3>
-            </div>
-            <div class="card">
-            <img src="./assets/images/18.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Daft Punk</h3>
-            </div>
-            <div class="card">
-            <img src="./assets/images/19.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">David Bowie</h3>
-            </div>
-        </div>
-        </div>
-        </section>
+                                <tr class="song-row">
+                                    <td>5</td>
+                                    <td class="song">
+                                        <img src="./assets/images/playlist 4.png">
+                                        <div>
+                                            <p class="title">One More Time</p>
+                                            <span class="artist">Daft Punk</span>
+                                        </div>
+                                    </td>
+                                    <td>Discovery</td>
+                                    <td>5:20</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
 
-        <section class="section">
-        <div class="section-header">
-           <h2 class="section-title">Albums For You</h2>
-          <div class="slider-arrows">
-          <button class="arrow arrow-left"></button>
-          <button class="arrow arrow-right"></button>
-          </div>
-          </div>
-          <div class="cards-scroll">
-        <div class="card-list">
-            <div class="card">
-            <img src="./assets/images/20.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Meteora</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Linkin Park</p>
-            </div>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-            <div class="card">
-            <img src="./assets/images/21.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Random Access...</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">Duft Pank</p>
-            </div>
+                                            <span class="play-circle"></span>
 
-            <div class="card">
-            <img src="./assets/images/22.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Abbey Road</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">The Beatles</p>
-            </div>
+                                        </div>
+                                    </td>
+                                </tr>
 
-            <div class="card">
-            <img src="./assets/images/23.png" alt="playlist cover" class="card-image">
-            <div class="card-meta">
-            <h3 class="card-title">Black Holes and...</h3>
-            <span class="card-badge">13</span>
-            </div>
-            <p class="card-subtitle">muse</p>
-            </div>
-        </div>
-        </div>
-        </section>
+                                <tr class="song-row">
+                                    <td>6</td>
+                                    <td class="song">
+                                        <img src="./assets/images/playlist 5.png">
+                                        <div>
+                                            <p class="title">Electric Feel</p>
+                                            <span class="artist">MGMT</span>
+                                        </div>
+                                    </td>
+                                    <td>Oracular Spectacular</td>
+                                    <td>3:49</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
 
-        <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Audiobooks For You</h2>
-          <div class="slider-arrows">
-          <button class="arrow arrow-left"></button>
-          <button class="arrow arrow-right"></button>
-          </div>
-          </div>
-        <div class="cards-scroll">
-        <div class="card-list">
-          <div class="card">
-            <img src="./assets/images/24.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Halo: The flood</h3>
-            <p class="card-subtitle">William C. Dietz</p>
-            </div>
-            <div class="card">
-            <img src="./assets/images/25.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Halo: First strike</h3>
-            <p class="card-subtitle">Erik Nylund</p>
-            </div>
-            <div class="card">
-            <img src="./assets/images/26.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Halo: Ghosts of Onyx</h3>
-            <p class="card-subtitle">Erik Nylund</p>
-            </div>
-        </div>
-        </div>
-        </section>
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
 
-        <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">Podcasts For You</h2>
-        <div class="slider-arrows">
-        <button class="arrow arrow-left"></button>
-        <button class="arrow arrow-right"></button>
-        </div>
-        </div>
-        <div class="cards-scroll">
-        <div class="card-list">
-          <div class="card">
-            <img src="./assets/images/24.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Anything goes...</h3>
-            <p class="card-subtitle">Emma Chamberlain</p>
-            </div>
-            <div class="card">
-            <img src="./assets/images/25.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">The Joe Rogan...</h3>
-            <p class="card-subtitle">Joe Rogan</p>
-            </div>
-            <div class="card">
-            <img src="./assets/images/26.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">The Journal</h3>
-            <p class="card-subtitle">The Wall Street Journal</p>
-            </div>
-        </div>
-        </div>
-        </section>
+                                            <span class="play-circle"></span>
 
-        <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">Episodes For You</h2>
-        <div class="slider-arrows">
-        <button class="arrow arrow-left"></button>
-        <button class="arrow arrow-right"></button>
-        </div>
-        </div>
-        <div class="cards-scroll">
-        <div class="card-list">
-          <div class="card">
-            <img src="./assets/images/24.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">Anything goes...</h3>
-            <p class="card-subtitle">Emma Chamberlain</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="song-row">
+                                    <td>7</td>
+                                    <td class="song">
+                                        <img src="./assets/images/player.png">
+                                        <div>
+                                            <p class="title">Give Life Back to Music</p>
+                                            <span class="artist">Daft Punk</span>
+                                        </div>
+                                    </td>
+                                    <td>Random Access Memories</td>
+                                    <td>4:35</td>
+                                    <td class="heart-actions">
+                                        <div class="actions">
+                                            <img src="./assets/icons/heart-filled.svg" class="like-btn"
+                                                data-filled="./assets/icons/heart-filled.svg"
+                                                data-outline="./assets/icons/heart-outline.svg" alt="heart icon">
+
+                                            <img src="./assets/icons/plus.svg" class="action-icon plus" alt="plus">
+                                            <img src="./assets/icons/more.svg" class="action-icon more" alt="more">
+
+                                            <span class="play-circle"></span>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
             </div>
-            <div class="card">
-            <img src="./assets/images/25.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">The Joe Rogan...</h3>
-            <p class="card-subtitle">Joe Rogan</p>
-            </div>
-            <div class="card">
-            <img src="./assets/images/26.png" alt="playlist cover" class="card-image">
-            <h3 class="card-title">The Journal</h3>
-            <p class="card-subtitle">The Wall Street Journal</p>
-            </div>
-        </div>
-        </div>
-        </section>
-    </main>
-   </div>
-  </div>
-</div>
-<!-- player -->
-  <footer class="player">
+            <footer class="player">
   <!-- left -->
   <div class="player-left">
 
@@ -729,35 +572,10 @@
     
   </div>
 </footer>
-<nav class="mobile-nav">
+    
 
-  <button class="mobile-nav-item active" onclick="window.location.href='index.html'">
-    <img src="./assets/icons/header 2.svg">
-    <span>Home</span>
-  </button>
-
-  <button class="mobile-nav-item" onclick="window.location.href='Discover.html'">
-    <img src="./assets/icons/header 3.svg">
-    <span>Discover</span>
-  </button>
-
-  <button class="mobile-nav-item" onclick="window.location.href='search.html'">
-    <img src="./assets/icons/search.svg">
-    <span>Search</span>
-  </button>
-
-  <button class="mobile-nav-item" onclick="window.location.href='MyLibrary.html'">
-    <img src="./assets/icons/header 1.svg">
-    <span>Library</span>
-  </button>
-
-  <button class="mobile-nav-item">
-    <img src="./assets/icons/Me.svg">
-    <span>Me</span>
-  </button>
-
-</nav>
 </body>
+
 </html>
 
 <script src="./js/app.js"></script>

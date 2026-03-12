@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="header-item">
-                        <button class="header-button">
+                        <button class="header-button" onclick="window.location.href='Discover.html'">
                             <span class="header-icon">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +225,7 @@
                             </ul>
 
                         <li class="sidebar-item">
-                            <button class="sidebar-link">
+                            <button class="sidebar-link" onclick="window.location.href='liked-song.html'"> 
                                 <span class="sidebar-icon">
                                     <svg width="23" height="20" viewBox="0 0 23 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -613,14 +613,20 @@
         </div>
         <!-- center-->
         <div class="player-center">
-            <img src="./assets/images/player.png" alt="cover" class="player-cover">
-            <div class="player-info">
-                <div class="song-title">Get Lucky</div>
-                <div class="song-artist">Daft Punk</div>
-            </div>
+    <img src="./assets/images/player.png" alt="cover" class="player-cover">
+    <div class="player-info">
+      <div class="song-title">Get Lucky</div>
+      <div class="song-artist">Daft Punk</div>
+    </div>
+      <button class="control-btn">
+        <img src="./assets/icons/add.svg">
+      </button>
 
-        </div>
-
+      <button class="control-btn">
+        <img src="./assets/icons/play.svg">
+      </button>
+    </div>
+ 
 
         <!-- RIGHT -->
 
@@ -654,7 +660,34 @@
         </div>
 
     </footer>
+<nav class="mobile-nav">
 
+  <button class="mobile-nav-item active" onclick="window.location.href='index.html'">
+    <img src="./assets/icons/header 2.svg">
+    <span>Home</span>
+  </button>
+
+  <button class="mobile-nav-item" onclick="window.location.href='Discover.html'">
+    <img src="./assets/icons/header 3.svg">
+    <span>Discover</span>
+  </button>
+
+  <button class="mobile-nav-item" onclick="window.location.href='search.html'">
+    <img src="./assets/icons/search.svg">
+    <span>Search</span>
+  </button>
+
+  <button class="mobile-nav-item" onclick="window.location.href='MyLibrary.html'">
+    <img src="./assets/icons/header 1.svg">
+    <span>Library</span>
+  </button>
+
+  <button class="mobile-nav-item">
+    <img src="./assets/icons/Me.svg">
+    <span>Me</span>
+  </button>
+
+</nav>
 </body>
 
 </html>
