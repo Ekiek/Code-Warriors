@@ -195,7 +195,6 @@
   transform: translateX(-50%) scale(1.1); 
 }
 
-
 //  hover ეფექტი სურათებს და აიქონებს
 .discover-image img,
 .discover-info .cover,
@@ -218,5 +217,7 @@
   .discover-image {
     display: none;
   }
-
+  .discover-header{
+    display: none;
+  }
 }
