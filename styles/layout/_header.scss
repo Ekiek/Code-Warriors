@@ -76,10 +76,15 @@
 .discover-header {
   display: flex;
   gap: 1rem;
-  background-color: $color-bg-primary; 
   padding: 1rem 2rem;
-  border-radius: 1.2rem;
   margin-bottom: 2rem;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.discover-header::-webkit-scrollbar {
+  display: none;
 }
 
 .discover-header .category {
@@ -109,29 +114,28 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background-color: $color-discover;
 }
 
 .discover-card {
   display: flex;
   align-items: center;
   gap: 6rem;
-  min-height: 80vh;
+  padding: 4rem 0;
 }
-
 .discover-image img {
-  width: 42rem;
-  border-radius: 2rem;
+  width: 36rem;
+  border-radius: 1.6rem;
 }
-
 .playlist {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
 .cover {
-  width: 16rem;
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
   border-radius: 1.2rem;
 }
 
