@@ -37,7 +37,7 @@ display:none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: $space-sm $space-md;
+    padding:0.8rem 1.2rem;
     border-radius: $radius-sm;
     background: transparent;
     border: none;
@@ -45,7 +45,7 @@ display:none;
     outline: none;
     color: $color-text-secondary;
     font-size: 1.4rem;
-
+    gap:1.2rem;
 
     cursor: pointer;
     transition: $transition-base;
@@ -85,15 +85,11 @@ display:none;
   button.sidebar-link:hover img{
     opacity: 1;
   }
-
-  .sidebar-icon img {
-    margin-right: $space-sm;
-  }
-  
+    
   .sidebar-text {
     flex: 1;
     text-align: left;
-
+    font-weight:500; 
     @include truncate;
   }
   

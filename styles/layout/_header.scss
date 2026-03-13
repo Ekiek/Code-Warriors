@@ -22,12 +22,11 @@
 }
 
 .header-button {
+  width: 18rem;
   display: flex;
   align-items: center;
   gap: $space-sm;
-
   padding: $space-sm $space-md;
-
   background: none;
   border: none;
   border-radius: $radius-sm;
@@ -35,6 +34,10 @@
   transition: $transition-base;
 }
 
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
 .header-button:hover {
   background: $color-hover;
   color: $color-text-primary;
@@ -47,23 +50,22 @@
 }
 
 .icon-button {
-  width: 3.6rem;
-  height: 3.6rem;
-
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: none;
-
   background: $color-bg-secondary;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
-
   transition: $transition-base;
 }
-
+.icon-button svg,
+.icon-button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 .icon-button:hover {
   background: $color-hover;
 }

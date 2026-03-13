@@ -1,6 +1,6 @@
 // Sections
 .section {
-  margin-bottom: $space-xl;
+  margin-bottom: $space-xxl;
 }
 
 .section-header {
@@ -70,7 +70,7 @@
 .cards-scroll {
   overflow-x: auto;
   overflow-y: hidden;
-
+  scroll-snap-align:start;
   scrollbar-width: none;
   scroll-behavior: smooth;
 
@@ -89,14 +89,16 @@
     display: none;
   }
 
-  .card-list {
-    display: flex;
-    gap: 1.6rem;
-    width: max-content;
-  }
+ .card-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16rem;
+  gap: $space-lg;
+  width: max-content;
+}
 
   .card {
-    min-width: 16rem;
+    width: 100%;
   }
 
 }
@@ -110,22 +112,6 @@
   gap: $space-md;
 
   width: max-content;
-}
-
-// როცა cards-scroll არ არსებობს,
-//  თვითონ card-list გახდეს scrollable
-.section > .card-list {
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-
-  padding-bottom: $space-xs;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 // Card

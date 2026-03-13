@@ -275,6 +275,7 @@ body {
 }
 
 .header-button {
+  width: 18rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -284,6 +285,11 @@ body {
   border-radius: 0.4rem;
   color: #b3b3b3;
   transition: 0.2s ease;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .header-button:hover {
@@ -298,8 +304,8 @@ body {
 }
 
 .icon-button {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: none;
   background: #181818;
@@ -308,6 +314,12 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+}
+
+.icon-button svg,
+.icon-button img {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .icon-button:hover {
@@ -495,7 +507,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 0.4rem;
   background: transparent;
   border: none;
@@ -503,6 +515,7 @@ body {
   outline: none;
   color: #b3b3b3;
   font-size: 1.4rem;
+  gap: 1.2rem;
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -540,13 +553,10 @@ button.sidebar-link:hover img {
   opacity: 1;
 }
 
-.sidebar-icon img {
-  margin-right: 0.8rem;
-}
-
 .sidebar-text {
   flex: 1;
   text-align: left;
+  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1178,7 +1188,7 @@ td {
   }
 }
 .section {
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .section-header {
@@ -1236,6 +1246,7 @@ td {
 .cards-scroll {
   overflow-x: auto;
   overflow-y: hidden;
+  scroll-snap-align: start;
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
@@ -1252,12 +1263,14 @@ td {
     display: none;
   }
   .card-list {
-    display: flex;
-    gap: 1.6rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 16rem;
+    gap: 2.4rem;
     width: max-content;
   }
   .card {
-    min-width: 16rem;
+    width: 100%;
   }
 }
 .card-list {
@@ -1266,17 +1279,6 @@ td {
   grid-auto-columns: 17rem;
   gap: 1.6rem;
   width: max-content;
-}
-
-.section > .card-list {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  padding-bottom: 0.4rem;
-}
-.section > .card-list::-webkit-scrollbar {
-  display: none;
 }
 
 .card {
