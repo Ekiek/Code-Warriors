@@ -2,8 +2,8 @@
 .player {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: $sidebar-width;
+  width:calc(100% - #{$sidebar-width});
   height: $player-height;
   background: $color-player;
   border-top: 0.1rem solid $color-border;

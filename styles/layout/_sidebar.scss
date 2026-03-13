@@ -1,14 +1,25 @@
 //  sidebar-ის მენიუსთვის
 
-.sidebar {
-  background: $color-sidebar;
-  width: $sidebar-width;
-  padding: $space-lg $space-md;
-  flex-shrink: 0;
-  
-  .sidebar-nav {
-    margin-bottom: $space-lg;
-  }
+.sidebar{
+width:$sidebar-width;
+flex-shrink:0;
+background-color:$color-sidebar;
+border-right:0.1rem solid $color-border;
+padding:$space-lg $space-md;
+
+display:flex;
+flex-direction:column;
+overflow:hidden;
+}
+
+.sidebar-nav{
+flex:1;
+overflow-y:auto;
+}
+
+.sidebar-nav::-webkit-scrollbar{
+display:none;
+}
   
   .sidebar-list {
     display: flex;
@@ -25,26 +36,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
-    
     padding: $space-sm $space-md;
     border-radius: $radius-sm;
-
     background: transparent;
     border: none;
     box-shadow: none;
     outline: none;
-
     color: $color-text-secondary;
-
     font-size: 1.4rem;
 
 
     cursor: pointer;
     transition: $transition-base;
-    
-    &:hover {
+        &:hover {
       color: $color-text-primary;
     } 
   }
@@ -96,8 +101,6 @@
     opacity: 0.6;
     margin-left: auto;
   }
-}
-
   // playlist-ის მენიუსთვის
 
 .sidebar-item {
@@ -141,12 +144,13 @@
 body {
   background: $color-sidebar;
   color: $color-text-primary;
-  padding: 4rem;
+  padding: 0;
 }
 
 .container {
   width: 100%;
   max-width: 100%;
+  padding: 4rem;
 }
 
 //  ცხრილის ზემოთ აიქონებისთვის

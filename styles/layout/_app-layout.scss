@@ -4,11 +4,11 @@
 
 .app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
   background-color: $color-bg-primary;
   color: $color-text-primary;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* ================================
@@ -31,28 +31,13 @@
    Main Wrapper
 ================================ */
 
-.layout {
-  flex: 1;
-  min-height: 0;
 
+ .layout {
+  flex: 1;
   display: flex;
   overflow: hidden;
 }
 
-/* ================================
-   Sidebar
-================================ */
-
-.sidebar {
-  width: $sidebar-width;
-  flex-shrink: 0;
-
-  background-color: $color-sidebar;
-  border-right: 0.1rem solid $color-border;
-  padding: $space-lg $space-md;
-
-  overflow-y: auto;
-}
 
 /* ================================
    Right Side Column
@@ -62,11 +47,9 @@
   flex: 1;
   min-width: 0;
   min-height: 0;
-
   display: flex;
   flex-direction: column;
-
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* ================================
@@ -75,18 +58,11 @@
 
 .content {
   flex: 1;
-  min-width: 0;
-  min-height: 0;
-
   overflow-y: auto;
   overflow-x: hidden;
 
   padding: $space-lg;
   padding-bottom: calc(#{$player-height} + #{$space-xl});
-
-  background-color: $color-bg-primary;
-
-  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;

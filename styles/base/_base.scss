@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -7,4 +8,5 @@ body {
   background-color: $color-bg-primary;
   color: $color-text-primary;
   line-height: 1.4;
+  overflow-x: hidden;
 }
