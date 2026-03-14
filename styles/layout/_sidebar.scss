@@ -5,11 +5,9 @@ width:$sidebar-width;
 flex-shrink:0;
 background-color:$color-sidebar;
 border-right:0.1rem solid $color-border;
-padding:$space-lg $space-md;
-
+padding:$space-xxl $space-md;
 display:flex;
 flex-direction:column;
-overflow:hidden;
 }
 
 .sidebar-nav{
@@ -32,7 +30,7 @@ display:none;
   }
   
   .sidebar-link {
-    all: unset;
+    // all: unset;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,9 +66,8 @@ display:none;
 
   .sidebar-icon,
   .sidebar-right-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    opacity: 0.6;
+    @include flex-center;
   }
 
   .sidebar-icon img,
@@ -93,10 +90,6 @@ display:none;
     @include truncate;
   }
   
-  .sidebar-right-icon {
-    opacity: 0.6;
-    margin-left: auto;
-  }
   // playlist-ის მენიუსთვის
 
 .sidebar-item {

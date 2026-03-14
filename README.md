@@ -59,6 +59,7 @@ styles/
 │ ├── _header.scss
 │ ├── _sidebar.scss
 │ └── _player.scss
+│ └── _mobile-nav.scss
 │
 ├── components/
 │ ├── _cards.scss

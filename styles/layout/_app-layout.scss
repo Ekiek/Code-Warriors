@@ -14,27 +14,23 @@
 /* ================================
    Header
 ================================ */
-
 .header {
   height: 6rem;
   padding: 0 $space-lg;
-
   @include flex-between;
-
   background-color: $color-bg-primary;
   border-bottom: 0.1rem solid $color-border;
-
   flex-shrink: 0;
 }
 
 /* ================================
    Main Wrapper
 ================================ */
-
-
  .layout {
-  flex: 1;
   display: flex;
+  flex: 1;
+  margin-top:$space-xxl;
+  height:calc(100vh - $space-xxl);
   overflow: hidden;
 }
 
@@ -42,7 +38,6 @@
 /* ================================
    Right Side Column
 ================================ */
-
 .main {
   flex: 1;
   min-width: 0;
@@ -50,20 +45,18 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-top:$space-lg;
 }
 
 /* ================================
    Scrollable Content
 ================================ */
-
 .content {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-
   padding: $space-lg;
   padding-bottom: calc(#{$player-height} + #{$space-xl});
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -73,13 +66,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.4rem;
+  margin-top: $space-lg;
 }
 
 .browse-header-left {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: $space-xs;
 }
 
 .browse-subtitle {
@@ -97,8 +90,7 @@
 
 .browse-grid {
   display: flex;
-  gap: 1.6rem;
-
+  gap: $space-md;
   width: max-content;
 }
 
@@ -110,7 +102,7 @@
 
 .slider-arrows {
   display: flex;
-  gap: 0.8rem;
+  gap: $space-sm;
 }
 
 .arrow {
@@ -132,7 +124,7 @@
 
   .mobile-search{
     display:block;
-    padding:1.6rem;
+    padding: $space-md;
   }
 
 }
@@ -154,7 +146,7 @@
   border:none;
   background:#1f1f1f;
   color:white;
-  padding:0 1.6rem 0 4rem;
+  padding:0 $space-md 0 4rem;
   font-size:1.4rem;
 }
 .search-icon{
